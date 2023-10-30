@@ -1,0 +1,10 @@
+(executable
+ (name factorial)
+ (modules factorial)
+ (public_name factorial)
+ (libraries DGryaznov.Lib)
+ (instrumentation
+  (backend bisect_ppx)))
+
+(cram
+ (deps %{bin:factorial}))
